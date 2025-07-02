@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Genero</th>
+            <th>Precio</th>
+            <th>Cantidad disponible</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (movie of movies; track movie.name) {
+            <tr [ngClass]="{'clearance': movie.clearance}">
+            <td><img [src]="movie.image" [alt]="movie.name" class="img-thumbnail" style="width: 150px;"/></td>
+            <td>{{ movie.name }}</td>
+            <td>{{ movie.genre }}</td>
+            <td>{{ movie.price | currency }}</td>
+            @if (movie.quantityAvailable > 0) {
+                <td>{{ movie.quantityAvailable }}</td>
+            }@else {
+                <td><span class="badge text-bg-danger" *ngIf="movie.quantityAvailable==0">Entradas agotadas</span></td>
+            }
+        </tr>
+        } @empty {
+            <tr>
+                <td colspan="4">No hay películas para mostrar.</td>
+            </tr>
+        }
+    </tbody>
+</table>
