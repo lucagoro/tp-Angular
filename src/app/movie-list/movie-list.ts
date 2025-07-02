@@ -16,6 +16,7 @@ export class MovieList {
     quantityAvailable: 0,
     image: 'assets/img/lilo.jpg',
     clearance: false,
+    quantity: 0,
     },
     {
     name: 'Meteoro',
@@ -24,6 +25,7 @@ export class MovieList {
     quantityAvailable: 0,
     image: 'assets/img/meteoro.webp',
     clearance: true,
+    quantity: 0,
     },
     {
     name: 'Los Peques',
@@ -32,6 +34,25 @@ export class MovieList {
     quantityAvailable: 3,
     image: 'assets/img/lospeques.webp',
     clearance: false,
+    quantity: 0,
     }
-]
+  ];
+
+  upQuantity(movie: Movie): void {
+    if(movie.quantity < movie.quantityAvailable)
+    movie.quantity++;
 }
+
+downQuantity(movie: Movie): void {
+  if(movie.quantity > 0) 
+  movie.quantity--;
+}
+
+changeQuantity(event: KeyboardEvent, movie: Movie): void {
+  if (event.key == 'a') {
+    event.preventDefault();
+  }
+}
+
+}
+

@@ -5,4 +5,5 @@ export interface Movie {
     quantityAvailable: number;
     image: String;
     clearance: boolean;
+    quantity: number;
 }

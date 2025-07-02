@@ -6,6 +6,7 @@
             <th>Genero</th>
             <th>Precio</th>
             <th>Cantidad disponible</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,11 @@
             }@else {
                 <td><span class="badge text-bg-danger" *ngIf="movie.quantityAvailable==0">Entradas agotadas</span></td>
             }
+            <td>
+                <button type="button" class="btn btn-light" (click)="downQuantity(movie)">-</button>
+                <input type="text" [(ngModel)]="movie.quantity" (keyup)="changeQuantity($event, movie)">
+                <button type="button" class="btn btn-light" (click)="upQuantity(movie)">+</button>
+            </td>
         </tr>
         } @empty {
             <tr>
