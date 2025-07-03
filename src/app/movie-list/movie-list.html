@@ -23,7 +23,7 @@
             }
             <td>
                 <button type="button" class="btn btn-light" (click)="downQuantity(movie)">-</button>
-                <input class="text-center" type="text" [(ngModel)]="movie.quantity" (keyup)="changeQuantity($event, movie)"> <!-- Ver esto de $event -->
+                <input class="text-center" type="text" [(ngModel)]="movie.quantity" (keyup)="changeQuantity($event, movie)" (keydown)="soloNumeros($event)"> <!-- Ver esto de $event -->
                 <button type="button" class="btn btn-light" (click)="upQuantity(movie)">+</button>
             </td>
         </tr>
