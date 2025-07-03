@@ -5,13 +5,17 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { MovieList } from './movie-list/movie-list';
 import { ShoppingCart } from './shopping-cart/shopping-cart';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { CinemaMovies } from './cinema-movies/cinema-movies';
+import { CinemaAbout } from './cinema-about/cinema-about'
 
 @NgModule({
   declarations: [
     App,
     MovieList,
-    ShoppingCart
+    ShoppingCart,
+    CinemaMovies,
+    CinemaAbout
   ],
   imports: [
     BrowserModule,
