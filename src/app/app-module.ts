@@ -7,7 +7,8 @@ import { MovieList } from './movie-list/movie-list';
 import { ShoppingCart } from './shopping-cart/shopping-cart';
 import { FormsModule } from '@angular/forms';
 import { CinemaMovies } from './cinema-movies/cinema-movies';
-import { CinemaAbout } from './cinema-about/cinema-about'
+import { CinemaAbout } from './cinema-about/cinema-about';
+import { InputInteger } from './input-integer/input-integer'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CinemaAbout } from './cinema-about/cinema-about'
     MovieList,
     ShoppingCart,
     CinemaMovies,
-    CinemaAbout
+    CinemaAbout,
+    InputInteger
   ],
   imports: [
     BrowserModule,

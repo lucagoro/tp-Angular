@@ -38,37 +38,9 @@ export class MovieList {
     }
   ];
 
-  upQuantity(movie: Movie): void {
-    if(movie.quantity < movie.quantityAvailable)
-    movie.quantity++;
-}
-
-downQuantity(movie: Movie): void {
-  if(movie.quantity > 0) 
-  movie.quantity--;
-}
-
-changeQuantity(event: KeyboardEvent, movie: Movie): void {
-  if (event.key == 'a') {
-    event.preventDefault();
+  maxReached(m: String) {
+    alert(m);
   }
-}
-
-soloNumeros(event: KeyboardEvent) {
-  const allowedKeys = [
-    'Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'
-  ];
-
-  // Permitir control (como Ctrl+C), teclas de navegación o números
-  if (
-    allowedKeys.includes(event.key) ||
-    (event.key >= '0' && event.key <= '9')
-  ) {
-    return; // todo bien, permitir
-  } else {
-    event.preventDefault(); // bloquear cualquier otra tecla (letras, símbolos, etc.)
-  }
-}
 
 }
 
