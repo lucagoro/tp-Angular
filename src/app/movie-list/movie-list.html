@@ -24,6 +24,7 @@
             @if (movie.quantityAvailable) {
                 <td>
                     <app-input-integer [(quantity)]="movie.quantity" [max]="movie.quantityAvailable" (maxReached)="maxReached($event)"></app-input-integer>
+                    <button class="btn btn-light" (click)="addToCart(movie)">Comprar</button>
                 </td>
             }
         </tr>

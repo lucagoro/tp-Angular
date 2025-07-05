@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Movie } from './Movie';
+import { MovieCartService } from '../movie-cart-service';
 
 @Component({
   selector: 'app-movie-list',
@@ -13,7 +14,7 @@ export class MovieList {
     name: 'Lilo y Stitch',
     genre: 'Animación/Infantil',
     price: 10000,
-    quantityAvailable: 0,
+    quantityAvailable: 5,
     image: 'assets/img/lilo.jpg',
     clearance: false,
     quantity: 0,
@@ -37,6 +38,15 @@ export class MovieList {
     quantity: 0,
     }
   ];
+
+  constructor(private cart: MovieCartService) {
+  }
+
+  addToCart(movie: Movie): void {
+    this.cart.addToCart(movie);
+    movie.quantityAvailable -= movie.quantity;
+    movie.quantity = 0;
+  }
 
   maxReached(m: String) {
     alert(m);
