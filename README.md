@@ -15,7 +15,7 @@ Sitio web de un cine donde se puede **ver la cartelera actual**, **seleccionar p
 
 ## 🔗 Enlace al proyecto en StackBlitz
 
-👉 [Abrir proyecto en StackBlitz](https://stackblitz.com/github/lucagoro/tp-Angular)
+👉 [Abrir proyecto en StackBlitz](https://stackblitz.com/edit/github-pxec8zm6)
 
 ---
 
